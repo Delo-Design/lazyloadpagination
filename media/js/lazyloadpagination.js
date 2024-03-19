@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (
             target_next === null ||
-            target_next === undefined
+            target_next === undefined ||
+            target_next.querySelector('a') === undefined ||
+            target_next.querySelector('a') === null
         ) {
             return;
         }
