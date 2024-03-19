@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+    if (
+        (window.scrollY + window.innerHeight) >= (target_content.offsetHeight - 200)
+    ) {
+        loadPage();
+    }
+
     document.addEventListener('scroll', function (ev) {
         if (
             (window.scrollY + window.innerHeight) >= (target_content.offsetHeight - 200)
