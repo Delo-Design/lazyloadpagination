@@ -12,19 +12,20 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
-    if (
-        (window.scrollY + window.innerHeight) >= (target_content.offsetHeight - 200)
-    ) {
-        loadPage();
-    }
+    checkLoad();
 
     document.addEventListener('scroll', function (ev) {
+        checkLoad();
+    });
+
+    function checkLoad() {
+        let position = target_content.getBoundingClientRect();
         if (
-            (window.scrollY + window.innerHeight) >= (target_content.offsetHeight - 200)
+            (window.scrollY + window.innerHeight) >= ((position.top + position.height) - 200)
         ) {
             loadPage();
         }
-    });
+    }
 
     function loadPage() {
 
