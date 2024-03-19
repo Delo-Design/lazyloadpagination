@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     let load_flag = false;
+    let title = document.querySelector('title');
     let target_content = document.querySelector(LazyLoadPaginationConfig.target_content);
     let target_pagination = document.querySelector(window.LazyLoadPaginationConfig.target_pagination);
 
@@ -68,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 let tmp_dom = document.createElement('div');
                 tmp_dom.innerHTML = xhr.responseText;
 
+                title.innerHTML = tmp_dom.querySelector('title').innerHTML;
                 target_pagination.innerHTML = tmp_dom.querySelector(window.LazyLoadPaginationConfig.target_pagination).innerHTML;
                 let content_new = tmp_dom.querySelector(window.LazyLoadPaginationConfig.target_content).innerHTML;
 
