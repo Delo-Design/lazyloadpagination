@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function checkLoad() {
         let position = target_content.getBoundingClientRect();
         if (
-            (window.scrollY + window.innerHeight) >= ((position.top + position.height) - 200)
+            (window.scrollY + window.innerHeight) >= ((target_content.offsetTop + position.height) - 150)
         ) {
             loadPage();
         }
