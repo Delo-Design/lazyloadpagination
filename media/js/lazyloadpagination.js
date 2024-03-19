@@ -78,7 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 history.pushState({state: 1}, "State 1", target_link);
 
-                load_flag = false;
+                setTimeout(function () {
+                    load_flag = false;
+                }, 500);
 
             } else {
                 throw Error(xhr.statusText);
