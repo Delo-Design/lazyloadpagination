@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (xhr.status === 0 || (xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
 
+                let target_content = document.querySelector(LazyLoadPaginationConfig.target_content);
+
                 let tmp_dom = document.createElement('div');
                 tmp_dom.innerHTML = xhr.responseText;
 
