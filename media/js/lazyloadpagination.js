@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        if (target_next === null) {
+        if (
+            target_next === null ||
+            target_next === undefined
+        ) {
             return;
         }
 
