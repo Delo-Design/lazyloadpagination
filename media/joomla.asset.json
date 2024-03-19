@@ -1,0 +1,21 @@
+{
+	"$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+	"name": "plg_system_lazyloadpagination",
+	"version": "0.0.1-dev",
+	"description": "Lazy load pagination for Joomla! CMS ™",
+	"license": "GPL-3.0-or-later",
+	"assets": [
+		{
+			"name": "plg_system_lazyloadpagination.lazyloadpagination",
+			"type": "script",
+			"uri": "plg_system_lazyloadpagination/lazyloadpagination.js",
+			"class": "LinksAssetItem",
+			"namespace": "Joomla\\Plugin\\System\\LazyLoadPagination\\WebAsset\\AssetItem",
+			"attributes": {
+				"defer": true,
+				"type": "module"
+			},
+			"version": "auto"
+		}
+	]
+}

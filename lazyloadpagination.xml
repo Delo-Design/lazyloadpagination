@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_LAZYLOADPAGINATION</name>
+    <author>Delo Design</author>
+    <creationDate>18.03.2024</creationDate>
+    <copyright>Copyright © 2023 Delo Design. All rights reserved.</copyright>
+    <license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>cymbal@delo-design.ru</authorEmail>
+    <authorUrl>https://delo-design.ru</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_LAZYLOADPAGINATION_DESCRIPTION</description>
+    <namespace path="src">Joomla\Plugin\System\LazyLoadPagination</namespace>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_lazyloadpagination.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_lazyloadpagination.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_lazyloadpagination.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_system_lazyloadpagination.sys.ini</language>
+    </languages>
+    <files>
+        <folder plugin="lazyloadpagination">src</folder>
+        <folder>language</folder>
+        <folder>services</folder>
+    </files>
+    <media destination="plg_system_lazyloadpagination" folder="media">
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        label="PLG_SYSTEM_LAZYLOADPAGINATION_CONFIG_TARGET_PAGINATION"
+                        name="target_pagination"
+                        type="text"
+                />
+                <field
+                        label="PLG_SYSTEM_LAZYLOADPAGINATION_CONFIG_TARGET_LI"
+                        name="target_li"
+                        type="text"
+                />
+                <field
+                        label="PLG_SYSTEM_LAZYLOADPAGINATION_CONFIG_TARGET_ACTIVE"
+                        name="target_active"
+                        type="text"
+                />
+                <field
+                        label="PLG_SYSTEM_LAZYLOADPAGINATION_CONFIG_TARGET_CONTENT"
+                        name="target_content"
+                        type="text"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
